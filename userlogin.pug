@@ -1,0 +1,29 @@
+doctype html
+html
+    head
+        title Login Page
+    body
+    fieldset
+        h2 Login Page
+        p #{msg}
+        form(method='POST' action='/userlogin')
+          div.form-group
+            label(for='name') Email: 
+            input.form-control(type='email' id='name' placeholder='Enter Email' name='username') 
+            br
+            br
+          div.form-group
+            label(for='password') Password:
+            input.form-control(type='password' id='name' pattern='[A-Z a-z 0-9]{8,}' title='There must be atleast 8 Characters' placeholder='password' name='pswd')
+            br
+            br
+            button.btn.btn-primary(type='submit') Login &nbsp;
+            
+            a(href='/')
+                button(type='button') Back &nbsp;
+            
+          
+
+
+
+                 

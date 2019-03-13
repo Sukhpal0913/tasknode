@@ -1,0 +1,20 @@
+doctype html
+html
+    head
+        title All User Details
+    body
+    fieldset
+        //- h2 Hello Admin
+        h2 List Of Users Registered With Us
+        form(method='POST' action='/logout')
+            button.btn.btn-primary(type='submit') Logout
+        each user in users
+            h3 #{user.name}
+            h3 #{user.email}
+            a(href='/userdetails/'+ user.id)
+                button(type='button') Details
+            
+        else
+            h1 No Record Found. .
+            a(href='/')
+                button(type='button') Add User

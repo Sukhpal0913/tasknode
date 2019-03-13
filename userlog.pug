@@ -1,0 +1,31 @@
+doctype html
+html
+    head
+        title  User Logged In
+    body
+    fieldset
+            h3 User Name: #{msg.name} 
+            
+            h3 ID: #{msg.id}
+            h3 Email: #{msg.email}
+            
+            form(method='POST' action='/logout')
+                a(href='/edit/' + msg.id)
+                    button(type='button') Edit Details
+                    
+
+                   
+                    br
+                    br
+
+        
+                    
+                div.form-group
+                    button.btn.btn-primary(type='submit') Logout
+
+
+                    
+
+
+                     a(href='/fileupload/' + msg.id)
+            button(type='button') Upload File

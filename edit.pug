@@ -1,0 +1,33 @@
+doctype html
+html
+    head
+        title Edit Page
+    body
+    fieldset
+        h3 You can edit your Details here
+        
+        form(method='POST' action='/editdetail')
+          div.form-group
+            label(for='name') User Name: 
+            input.form-control(type='text' id='name' value= msg.name pattern='[A-Z a-z]{8,}' title='There should be atleast 8 Characters' name='name')
+            br
+            br
+          div.form-group
+            label(for='email') Email 
+            input.form-control(type='email' id='email' value= msg.email name='email')
+            br
+            br
+          div.form-group
+            label(for='password') Password 
+            input.form-control(type='password' id='name' pattern='[A-Z a-z 0-9]{8,}' title='There should be atleast 8 Characters' value= msg.Password readonly name='pswd')
+            br
+            br
+          div.form-group
+            label(for='cpassword') Confirm Password 
+            input.form-control(type='password' id='cpswd' pattern='[A-Z a-z 0-9]{8,}' title='There should be atleast 8 Characters' placeholder='confirm password' name='pswd1')
+            input.form-control(type='hidden' value = msg.id name='userId')
+            br
+            br
+          button.btn.btn-primary(type='submit') Update Details &nbsp;
+          a(href='/')
+            button(type='button') Home &nbsp;

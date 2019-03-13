@@ -1,0 +1,13 @@
+doctype html
+html
+   head
+      title Uploading Form: 
+   body
+      h3 Upload a file:
+      p #{msg}
+      p Select file to be uploaded:
+      form(method='POST' action='/upload' enctype = 'multipart/form-data')
+         div.form-group
+            input.form-control(type='file' id='name' name='single')
+            br
+            button.btn.btn-primary(type='submit') Upload File &nbsp;

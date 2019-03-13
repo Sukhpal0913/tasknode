@@ -1,0 +1,44 @@
+doctype html
+html
+    head
+    
+        title Registration
+        
+    body
+    fieldset
+        h1 Registration Form
+        p #{msg}
+        form(method='POST' action='/')
+        
+          div.form-group
+            label(for='name') User Name 
+            input.form-control(type='#' id='name' placeholder='Name' pattern='[A-Z a-z]{8,}' title='There should be atleast 8 Characters' name='name')
+            br
+            br
+          div.form-group
+            label(for='email') Email 
+            input.form-control(type='email' id='email' placeholder='email' name='email') 
+            br
+            br
+          div.form-group
+            label(for='password') Password 
+            input.form-control(type='password' id='pass' pattern='[A-Z a-z 0-9]{8,}' title='There must be atleast 8 Characters ' placeholder='password' name='pswd')
+            br
+            br
+          div.form-group
+            label(for='cpassword') Confirm Password 
+            input.form-control(type='password' id='cpswd' pattern='[A-Z a-z 0-9]{8,}' title='There must be atleast 8 Characters ' placeholder='confirm password' name='pswd1')
+          br
+          button.btn.btn-primary(type='submit' id='button') Signup &nbsp;
+          
+          
+          a(href='/userlogin')
+            button(type='button') Login &nbsp;
+          
+          a(href='/admin')
+            button(type='button') Admin &nbsp;
+            
+
+            
+
+          

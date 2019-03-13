@@ -1,0 +1,19 @@
+doctype html
+html
+    head
+        title User Information
+    body
+    fieldset
+        h2 User Information
+        
+        h3 Id:#{msg.id}
+        h3 Name: #{msg.name}
+        h3 Email: #{msg.email}
+        h3 Password:#{msg.Password}
+        a(href='/edit/' + msg.id)
+            button(type='button') Edit Details &nbsp; 
+        a(href='/delete/' + msg.id) 
+            button(type='button') Delete Details &nbsp; 
+        a(href='/userdetails') &nbsp;
+            button(type='button') Back &nbsp;
+    
